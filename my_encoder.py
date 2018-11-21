@@ -1,3 +1,7 @@
+import numpy as np
+import pandas as pd
+
+
 def encoder(series, target=None):
     """Encoder function to label high-variable values (more than 30)
     Have 2 option:
@@ -15,8 +19,7 @@ def encoder(series, target=None):
     :param: series (list of categorical values), target (None or list of categorical values)
     :return: numerical labeled series, key (key for labeled data)
     """
-    import numpy as np
-    import pandas as pd
+
     d = {0.1: 1,
          0.2: 2,
          0.3: 3,
@@ -71,8 +74,9 @@ def decoder(series, key):
     return result
 
 # example
+
+
 if __name__ == '__main__':
-    import pandas as pd
     series = pd.Series(data=['usa', 'usa', 'usa', 'jpn', 'jpn', 'jpn', 'jpn', 'jpn', 'fra', 'fra', 'sgp', 'sgp'])
     print('Original series', series)
     series_labeled, key_table = encoder(series)
