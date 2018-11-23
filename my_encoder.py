@@ -15,7 +15,7 @@ def encoder(series, target=None):
         - groups data by sum in target column
         - divides list of frequencies into quartiles
         - appoints the label to each referring quartile
-    :type target: pandas.series
+    :type series: pandas.series, target: pandas.series
     :param: series (list of categorical values), target (None or list of categorical values)
     :return: numerical labeled series, key (key for labeled data)
     """
