@@ -3,8 +3,8 @@ import numpy as np
 
 def softmax_agr(x):
     """
-    Function aggressively (higher score gets higher weight) distributes weights of ucb scores based on exponential weighing
-    :param x: -> list of ucb scores
+    Function aggressively (higher score gets higher weight) distributes weights of some scores based on exponential weighing
+    :param x: -> list of scores
     :return: aggressively weighed scores
     """
     stdev = np.std(x)
